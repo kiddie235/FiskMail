@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8">
+    	<title>Fisk Mail: Please Register</title>
+    	<link rel="stylesheet" media="screen" href="stylesRegister.css" >
+    	<link rel="icon" type="image/ico" href="favicon.ico">
+    	<script src="https://cdn.firebase.com/js/client/1.0.24/firebase.js"></script>
+	</head>
+
+	<body background="sativa.png">
+		
+		<div style="width:800px; margin:0 auto;">
+			<form id="register_form" class="register_form" action="" method="post" name="register_form">
+				<ul>
+    				<li>
+         				<h2>Please Register for Mail Notification:</h2>
+         				<span class="required_notification">* All Fields Required</span>
+    				</li>
+    				<li>
+        				<label for="name">Name:</label>
+        				<input type="text" name="name" placeholder="Johnny Doe" required />
+    				</li>
+    				<li>
+    					<label for="email">Email:</label>
+				    	<input type="text" name="email" placeholder="johnny.doe@my.fisk.edu" required pattern="^[a-z]+\.[a-z]+@+(my).(fisk)\.(edu)$" />
+				    	<span class="form_hint">Proper format "firstname.surname@my.fisk.edu"</span>
+					</li>
+					<li>
+				    	<label for="website">Phone:</label>
+				    	<input type="tel" name="phone" placeholder="6153298500" required pattern="[0-9]{10}" />
+				    	<span class="form_hint">Proper format "6153298500"</span>
+					</li>
+					<li>
+				    	<label for="message">Legal Agreement:</label>
+				    	<textarea name="message" cols="40" rows="6" required readonly >You agree to the terms and conditions outlined in this Terms and Conditions of use Agreement (Agreement) with respect to our site (the Site). This Agreement constitutes the entire and only agreement between us and you, and supersedes all prior or contemporaneous agreements, representations, warranties and understandings with respect to the Site, the content, free product samples or freebie offers or services provided by or listed on the Site, and the subject matter of this Agreement. This Agreement may be amended by us at any time and at any frequency without specific notice to you. The latest Agreement will be posted on the Site, and you should review this Agreement prior to using the Site.</textarea>
+					</li>
+					<li>
+				    	<button class="submit" type="submit" onclick="getData()">Submit Form</button>
+					</li>
+				</ul>
+			</form>
+        
+        	<footer>
+        		<a href="http://www.fisk.edu" target="_blank"><img src="fiskUni.png" alt="Fisk university image" height="100" width="350"></a>
+        	</footer>
+        </div>
+
+        <script type="text/javascript">
+			var myFireBase = new Firebase("https://fiskmail.firebaseio.com/");
+
+			var name = document.getElementByName("name");
+			alert(name);
+
+			}
+			
+			
+		</script>
+
+
+	</body>
+</html>
