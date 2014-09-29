@@ -11,7 +11,7 @@
 	<body background="sativa.png">
 		
 		<div style="width:800px; margin:0 auto;">
-			<form id="register_form" class="register_form" action="" method="post" name="register_form">
+			<form id="register_form" class="register_form" method="post" name="register_form">
 				<ul>
     				<li>
          				<h2>Please Register for Mail Notification:</h2>
@@ -19,7 +19,7 @@
     				</li>
     				<li>
         				<label for="name">Name:</label>
-        				<input type="text" name="name" placeholder="Johnny Doe" required />
+        				<input type="text" id="testing" name="name" placeholder="Johnny Doe" required />
     				</li>
     				<li>
     					<label for="email">Email:</label>
@@ -36,7 +36,7 @@
 				    	<textarea name="message" cols="40" rows="6" required readonly >You agree to the terms and conditions outlined in this Terms and Conditions of use Agreement (Agreement) with respect to our site (the Site). This Agreement constitutes the entire and only agreement between us and you, and supersedes all prior or contemporaneous agreements, representations, warranties and understandings with respect to the Site, the content, free product samples or freebie offers or services provided by or listed on the Site, and the subject matter of this Agreement. This Agreement may be amended by us at any time and at any frequency without specific notice to you. The latest Agreement will be posted on the Site, and you should review this Agreement prior to using the Site.</textarea>
 					</li>
 					<li>
-				    	<button class="submit" type="submit" onclick="getData()">Submit Form</button>
+				    	<button class="submit" type="submit" onclick="doStuff()">Register</button>
 					</li>
 				</ul>
 			</form>
@@ -47,16 +47,16 @@
         </div>
 
         <script type="text/javascript">
-			var myFireBase = new Firebase("https://fiskmail.firebaseio.com/");
+			//var myFireBase = new Firebase("https://fiskmail.firebaseio.com/");
 
-			var name = document.getElementByName("name");
-			alert(name);
+			function doStuff()  {
+				var nameElement = document.getElementById("testing");
+				var theName = nameElement.value;
+				alert(thename);
 
-			}
-			
-			
+				alert("hello");
+			}	
 		</script>
-
 
 	</body>
 </html>
