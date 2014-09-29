@@ -63,13 +63,16 @@
             		var thePhone = phone.value;
 
             		//writing data to Firebase
-            		var usersRef = myFirebaseRef.child("users");
+            		var usersRef = myFirebaseRef.child("fiskites");
 
             		usersRef.push({
             			name: theName,
             			email: theEmail,
             			phone: thePhone
             		});
+
+            		//reading data from Firebase
+            		var readData = new Firebase("https://fiskmail.firebaseio.com/fiskites")
                 	
             	};
     	    });
