@@ -71,9 +71,15 @@
             			phone: thePhone
             		});
 
-            		//reading data from Firebase
-            		var readData = new Firebase("https://fiskmail.firebaseio.com/fiskites")
-                	
+            		//reading data from Firebase - reference to data url
+            		//var readFirebaseRef = new Firebase("https://fiskmail.firebaseio.com/fiskites");
+
+            		//Attach asynchronous callback to read data
+            		myFirebaseRef.child("fiskites").on("value", function(snapshot) {
+            			alert(snapshot.val());
+            		});
+
+            		            	
             	};
     	    });
     	</script>
